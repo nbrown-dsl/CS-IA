@@ -1,28 +1,26 @@
 from tkinter import * 
-import tkinter as tk 
-from tkinter import ttk 
 
 root = Tk()
-root.title("User page")
+root.title("Note page")
 root.geometry("1000x500")
 
-v = tk.StringVar()
-def setText(word):
-    v.set(word)
-
 def clicked(): 
-    Add_button = Label(root, text="Welcome").pack() 
+    input= Name.get()
+    user_name = label(root, text = "welcome" + input)
+    user_name.pack()
 
-User_label = Label(root, text="Users", font=("Helvtica", 16))
-User_label.pack()
+User = Label(root, text="Please enter Username:")
+User.pack()
 
-User_Name = Entry(root, width= 30, font=("Helvetica", 15 ), command= setText("Insert Name"))
-User_Name.pack()
+user_name = Entry(root, font=("Helvetica",15))
+user_name.pack(pady=20)
 
-Add_button = Button(root, text="ADD", command=clicked)
-Add_button.pack()
+button_1 = Button(root, text="ADD", command=clicked)
+button_1.pack(pady=20)
 
 
+
+#add messagebos for buttons, yes or no prompt
 
 
 root.mainloop()

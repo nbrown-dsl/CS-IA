@@ -1,5 +1,8 @@
 from tkinter import *
+import About_page
 import time 
+import os
+
 
 root = Tk()
 root.title("Welcome to TASP!")
@@ -19,7 +22,7 @@ nav_menu.add_cascade(label="Menu", menu = file_Main)
 
 file_Main.add_command(label="Main Page", command=our_command)
 
-file_Main.add_command(label="About Page", command=our_command)
+file_Main.add_command(label="About Page", command=About_page.aboutinfo)
 
 file_Main.add_command(label="User Page", command=our_command)
 
